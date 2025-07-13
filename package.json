@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "server": "node server/index.js",
-    "client": "npm --prefix client start"
+    "client": "npm --prefix client start",
+    "build": "npm --prefix client run build"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
