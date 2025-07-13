@@ -1,4 +1,3 @@
-// ======================= server/index.js =======================
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
@@ -47,5 +46,12 @@ app.post('/api/update-row', async (req, res) => {
   }
 });
 
-// ⬇️ Export sebagai handler agar bisa dipakai Vercel
+// ✅ Jalankan server jika dijalankan langsung (bukan di-import)
+if (require.main === module) {
+  const PORT = process.env.PORT || 3001;
+  app.listen(PORT, () => {
+    console.log(`🚀 Server berjalan di port ${PORT}`);
+  });
+}
+
 module.exports = app;
