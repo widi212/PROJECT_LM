@@ -59,6 +59,11 @@ const styles = {
     cursor: 'pointer',
     width: '100%',
   },
+  link: {
+  color: '#4fc3f7',
+  textDecoration: 'underline',
+  cursor: 'pointer'}
+
 };
 
 export default SearchBar;
